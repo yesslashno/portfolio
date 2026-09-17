@@ -16,7 +16,7 @@ img {
 }
 
 .page {
-  width: min(90%, 1024px);
+  width: min(90%, 768px);
   margin: 0 auto;
   container-type: inline-size;
 }
@@ -64,7 +64,7 @@ img {
   height: auto;
 }
 
-/* 1024 × 576 at full size. Percentages match the reference layout. */
+/* 768 × 432 at full size. Percentages match the reference layout. */
 .intersection {
   position: relative;
   aspect-ratio: 16 / 9;
