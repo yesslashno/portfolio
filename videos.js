@@ -34,8 +34,9 @@ document.querySelectorAll('.video-feature').forEach((feature) => {
   });
 
   button.addEventListener('click', () => {
-    // Pause other media so the selected film has the viewer's attention.
-    document.querySelectorAll('video').forEach((video) => video.pause());
+    // Only stop other full films; silent loops should keep animating.
+    document.querySelectorAll('.full-film').forEach((video) => video.pause());
+    if (preview.tagName === 'VIDEO') preview.pause();
     error.hidden = true;
     preview.hidden = true;
     button.hidden = true;
@@ -52,3 +53,19 @@ document.querySelectorAll('.video-feature').forEach((feature) => {
     button.focus();
   });
 });
+
+// Resume every silent loop when it returns onscreen, including the standalone clips.
+const loops = [...document.querySelectorAll('video[autoplay][muted][loop]')];
+function updateLoop(video) {
+  const bounds = video.getBoundingClientRect();
+  const visible = !document.hidden && !video.hidden && bounds.width > 0 &&
+    bounds.bottom > 0 && bounds.top < window.innerHeight &&
+    bounds.right > 0 && bounds.left < window.innerWidth;
+  if (visible) video.play().catch(() => {});
+  else video.pause();
+}
+const loopObserver = new IntersectionObserver((entries) => {
+  entries.forEach(({ target }) => updateLoop(target));
+});
+loops.forEach((video) => loopObserver.observe(video));
+document.addEventListener('visibilitychange', () => loops.forEach(updateLoop));
