@@ -5,15 +5,33 @@ document.querySelectorAll('.video-feature').forEach((feature) => {
   const button = feature.querySelector('.play-button');
   const error = feature.querySelector('.video-error');
 
+  let inView = true;
+
   function restorePreview(message = '') {
-    film.pause();
     film.hidden = true;
+    film.pause();
     preview.hidden = false;
     button.hidden = false;
     error.textContent = message;
     error.hidden = !message;
-    if (preview.tagName === 'VIDEO') preview.play().catch(() => {});
+    if (preview.tagName === 'VIDEO' && inView) preview.play().catch(() => {});
   }
+
+  // Keep a paused film available while it is visible. Restore its preview
+  // after it leaves the viewport, ready for the viewer's return.
+  const observer = new IntersectionObserver(([entry]) => {
+    inView = entry.isIntersecting;
+    if (!inView && !film.hidden && film.paused) restorePreview();
+    if (preview.tagName === 'VIDEO' && !preview.hidden) {
+      if (inView) preview.play().catch(() => {});
+      else preview.pause();
+    }
+  });
+  observer.observe(feature);
+
+  film.addEventListener('pause', () => {
+    if (!inView && !film.hidden) restorePreview();
+  });
 
   button.addEventListener('click', () => {
     // Pause other media so the selected film has the viewer's attention.

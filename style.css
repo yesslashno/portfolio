@@ -184,7 +184,7 @@ img {
 .project-description {
   margin: 0;
   padding-top: .7cqw;
-  font-size: 1.6cqw;
+  font-size: 1.5cqw;
   line-height: 1.8;
 }
 
@@ -260,4 +260,14 @@ img {
 
 [hidden] {
   display: none !important;
+}
+
+/* Fill the preview frame; full films keep their uncropped proportions. */
+.video-feature > .video-preview {
+  object-fit: cover;
+}
+
+/* Match the reference line breaks while the type scales with the page. */
+.copy-line {
+  display: block;
 }
