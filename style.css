@@ -6,56 +6,120 @@ body {
   margin: 0;
   background: #000;
   color: #fff;
-  font-family: Helvetica, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica Light", Helvetica, Arial, sans-serif;
+  font-weight: 300;
 }
 
-.project {
-  width: min(90%, 1200px);
-  margin: 50px auto;
-}
-
-.project-number {
-  margin-bottom: 45px;
-}
-
-.project-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  margin-bottom: 120px;
-}
-
-h1 {
-  margin: 0;
-  font-size: 48px;
-  line-height: 1;
-  font-weight: 400;
-  color: #554cff;
-}
-
-.description {
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-a {
-  color: #554cff;
-}
-
-.media img,
-.media video {
+img {
   display: block;
+  max-width: 100%;
+}
+
+.page {
+  width: min(90%, 1440px);
+  margin: 0 auto;
+  container-type: inline-size;
+}
+
+/* This whole composition scales together, including its whitespace. */
+.intro {
+  position: relative;
+  aspect-ratio: 1440 / 970;
+}
+
+.intro-label {
+  position: absolute;
+  top: 2%;
+  width: 100%;
+  margin: 0;
+  color: #696767;
+  text-align: center;
+  font-size: 1.25cqw;
+  line-height: 1.3;
+}
+
+.intro-art {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  transform: translateY(-3%);
+}
+
+.intro-face {
+  grid-area: 1 / 1;
+  width: 24%;
+  height: auto;
+}
+
+.intro-heading {
+  grid-area: 1 / 1;
+  z-index: 1;
+  width: 76%;
+  margin: 0;
+}
+
+.intro-heading img {
   width: 100%;
   height: auto;
-  margin: 0 0 12px;
 }
 
+/* 1440 × 810 at full size. Percentages match the reference layout. */
+.intersection {
+  position: relative;
+  aspect-ratio: 16 / 9;
+}
+
+.gradient {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portrait {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 27%;
+  height: auto;
+  max-height: 70%;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+}
+
+.caption {
+  position: absolute;
+  margin: 0;
+  font-size: 1.4cqw;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.caption-one {
+  left: 20%;
+  top: 23%;
+}
+
+.caption-two {
+  left: 9%;
+  top: 37%;
+}
+
+.caption-three {
+  left: 77.5%;
+  top: 67%;
+}
+
+.caption-four {
+  left: 67%;
+  top: 83%;
+}
+
+/* Mobile uses the full screen width without rearranging the artwork. */
 @media (max-width: 700px) {
-
-  .project-header {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    margin-bottom: 70px;
+  .page {
+    width: 100%;
   }
-
 }
