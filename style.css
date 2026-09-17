@@ -271,3 +271,29 @@ img {
 .copy-line {
   display: block;
 }
+
+.project-awards {
+  margin: 5cqw 0 0;
+  color: #696767;
+  font-size: 2cqw;
+  line-height: 1.3;
+}
+
+.ghost-composite {
+  position: relative;
+}
+
+.ghost-composite > .ghost-overlay {
+  position: absolute;
+  width: 30%;
+  height: auto;
+  left: 12%;
+  top: 12%;
+}
+
+.project-credits {
+  margin: 1.2cqw 0 0;
+  color: #696767;
+  font-size: 1.6cqw;
+  line-height: 1.5;
+}

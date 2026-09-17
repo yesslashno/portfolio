@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>E.B. Davis III — Portfolio</title>
-  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
   <main class="page">
@@ -99,6 +99,41 @@
         <img src="images/Novi/novi-washingtonpost.webp" alt="Washington Post coverage of Facebook's cryptocurrency project" loading="lazy">
         <img src="images/Novi/novi-team.webp" alt="The Novi creative team" loading="lazy">
       </div>
+    </section>
+
+    <section class="project ghost-project" style="--accent: #00b5df" aria-labelledby="ghost-title">
+      <header class="project-intro">
+        <p class="project-number">2</p>
+        <div class="project-header">
+          <div>
+            <h2 id="ghost-title">Bringing video<br>games into the<br>smart home.</h2>
+            <p class="project-awards">Gold, Silver, Bronze Lions</p>
+          </div>
+          <p class="project-description">For Activision, we brought the rich, immersive worlds of gaming into the real world.</p>
+        </div>
+      </header>
+      <div class="project-media">
+        <img src="images/Ghost/cannes-colors.gif" alt="Celebrating at Cannes with a Lion award" loading="lazy">
+        <!-- Percentages keep the animated Ghost aligned as the photo scales. -->
+        <div class="ghost-composite">
+          <img src="images/Ghost/hand-holding-ghost.jpg" alt="A Ghost floating above a Guardian's hand in Destiny" loading="lazy">
+          <img class="ghost-overlay" src="images/Ghost/ghostgif.gif" alt="" loading="lazy">
+        </div>
+        <div class="video-feature">
+          <img class="video-preview" src="images/Ghost/ghost_hero.jpeg" alt="Destiny Ghost and Amazon Echo" loading="lazy">
+          <video class="full-film" controls playsinline preload="none" data-src="images/Ghost/ghost_cs.mp4" aria-label="Destiny Ghost case study film" hidden></video>
+          <button class="play-button" type="button" aria-label="Play Destiny Ghost case study film"><span aria-hidden="true">▶</span></button>
+          <p class="video-error" role="status" hidden></p>
+        </div>
+        <video autoplay muted loop playsinline preload="metadata" aria-label="Ghost loadout demonstration">
+          <source src="images/Ghost/ghost-loadout.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop playsinline preload="metadata" aria-label="Ghost commercials">
+          <source src="images/Ghost/ghost-commercials.mp4" type="video/mp4">
+        </video>
+        <img src="images/Ghost/ghost-press.png" alt="Press coverage of Destiny 2's Ghost voice assistant" loading="lazy">
+      </div>
+      <p class="project-credits">Silver Cannes Lion, Gold Clio, 2x Adweek Project Isaac, Silver Clio<br>Forbes, Polygon, Engadget, Time, PSFK, Mashable, The Verge, Rolling Stone</p>
     </section>
   </main>
   <script src="videos.js?v=8" defer></script>
