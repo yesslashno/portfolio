@@ -123,3 +123,141 @@ img {
     width: 100%;
   }
 }
+
+/* Contents and case studies retain the desktop composition on mobile. */
+.contents {
+  padding: 16cqw 0 13cqw;
+  text-align: center;
+}
+
+.contents ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 5.6cqw;
+  line-height: 1;
+}
+
+.contents-arrow {
+  display: block;
+  margin-top: 3.5cqw;
+  color: #696767;
+  font-size: 4cqw;
+  line-height: 1;
+}
+
+.deck-image {
+  width: 100%;
+  height: auto;
+}
+
+.project {
+  margin-top: 13cqw;
+  margin-bottom: 10cqw;
+}
+
+.project-intro {
+  padding: 0 1.6%;
+  margin-bottom: 14.5cqw;
+}
+
+.project-number {
+  margin: 0 0 3.7cqw;
+  font-size: 3cqw;
+  line-height: 1;
+}
+
+.project-header {
+  display: grid;
+  grid-template-columns: 48% 46%;
+  gap: 6%;
+}
+
+.project h2 {
+  margin: 0;
+  font-size: 5.3cqw;
+  line-height: 1;
+  font-weight: 300;
+  color: var(--accent, #fff);
+}
+
+.project-description {
+  margin: 0;
+  padding-top: .7cqw;
+  font-size: 1.6cqw;
+  line-height: 1.8;
+}
+
+.project a {
+  color: var(--accent, #fff);
+}
+
+.project-media {
+  display: grid;
+  gap: 1cqw;
+}
+
+.project-media img,
+.project-media video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.video-feature {
+  position: relative;
+  aspect-ratio: 16 / 9;
+}
+
+.video-feature > img,
+.video-feature > video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.play-button {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.play-button span {
+  display: grid;
+  place-items: center;
+  width: clamp(28px, 5cqw, 44px);
+  aspect-ratio: 1;
+  padding-left: .15em;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  background: #0003;
+  font-size: clamp(14px, 2.5cqw, 22px);
+}
+
+.play-button:focus-visible {
+  outline: 2px solid white;
+  outline-offset: -4px;
+}
+
+.video-error {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  padding: 12px;
+  background: #000c;
+  color: white;
+  font-size: 14px;
+}
+
+[hidden] {
+  display: none !important;
+}

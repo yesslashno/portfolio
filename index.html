@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>E.B. Davis III — Portfolio</title>
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
   <main class="page">
@@ -30,6 +30,71 @@
       <p class="caption caption-three">of your butt</p>
       <p class="caption caption-four">and your mom</p>
     </section>
+
+    <!-- Contents are display text, not links. -->
+    <section class="contents" aria-label="Selected clients">
+      <ul>
+        <li>Coca-Cola</li>
+        <li>Robinhood</li>
+        <li>Rivian</li>
+        <li>Novi from Facebook</li>
+        <li>Oculus Quest</li>
+        <li>Levi's</li>
+        <li>Activision</li>
+        <li>Airbnb</li>
+        <li>Minecraft</li>
+        <li>Xbox</li>
+      </ul>
+      <span class="contents-arrow" aria-hidden="true">↓</span>
+    </section>
+
+    <img class="deck-image" src="images/one-more-deck.png" alt="One more deck" loading="lazy">
+
+    <!-- Change --accent to set a project's title and link color. -->
+    <section class="project" style="--accent: #554cff" aria-labelledby="novi-title">
+      <header class="project-intro">
+        <p class="project-number">1</p>
+        <div class="project-header">
+          <h2 id="novi-title">Novi makes<br>money move</h2>
+          <p class="project-description">Sending money across borders suuuucks. It's slow, there are huge fees, and a surprising amount of the world does not have a bank account. Novi from Facebook was intended to revolutionize all of that. <a href="https://www.washingtonpost.com/technology/2022/01/28/facebook-cryptocurrency-diem/">Until Congress killed it!</a> Up to that point, we helped them build an identity ¯\_(ツ)_/¯</p>
+        </div>
+      </header>
+
+      <!-- Keep these eight media items in display order. -->
+      <div class="project-media">
+        <video autoplay muted loop playsinline preload="metadata" aria-label="Novi anthem opening">
+          <source src="images/Novi/novi-anthem1-720.mp4" type="video/mp4">
+        </video>
+        <img src="images/Novi/novi-africa.webp" alt="Novi campaign in Africa" loading="lazy">
+
+        <!-- Muted looping preview; click the button to play the full film. -->
+        <div class="video-feature">
+          <video class="video-preview" autoplay muted loop playsinline preload="metadata" poster="images/Novi/novi-africa.webp" aria-label="Novi anthem preview">
+            <source src="images/Novi/novi-anthem2-720.mp4" type="video/mp4">
+          </video>
+          <video class="full-film" controls playsinline preload="none" data-src="images/Novi/novi-anthem_shorter.mp4" aria-label="Novi anthem film" hidden></video>
+          <button class="play-button" type="button" aria-label="Play Novi anthem film"><span aria-hidden="true">▶</span></button>
+          <p class="video-error" role="status" hidden></p>
+        </div>
+
+        <img src="images/Novi/novi-photography.webp" alt="Novi campaign photography and designs" loading="lazy">
+        <video autoplay muted loop playsinline preload="metadata" aria-label="Novi manifesto preview">
+          <source src="images/Novi/novi-manifesto-girl.mp4" type="video/mp4">
+        </video>
+
+        <!-- Still thumbnail; click the button to play the full film. -->
+        <div class="video-feature">
+          <img class="video-preview" src="images/Novi/novi-manifesto-girl.webp" alt="Novi manifesto film" loading="lazy">
+          <video class="full-film" controls playsinline preload="none" data-src="images/Novi/novi-manifesto_shorter.mp4" aria-label="Novi manifesto film" hidden></video>
+          <button class="play-button" type="button" aria-label="Play Novi manifesto film"><span aria-hidden="true">▶</span></button>
+          <p class="video-error" role="status" hidden></p>
+        </div>
+
+        <img src="images/Novi/novi-washingtonpost.webp" alt="Washington Post coverage of Facebook's cryptocurrency project" loading="lazy">
+        <img src="images/Novi/novi-team.webp" alt="The Novi creative team" loading="lazy">
+      </div>
+    </section>
   </main>
+  <script src="videos.js" defer></script>
 </body>
 </html>
