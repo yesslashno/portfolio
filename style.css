@@ -297,3 +297,28 @@ img {
   font-size: 1.6cqw;
   line-height: 1.5;
 }
+
+/* The same gap separates media horizontally and vertically. */
+.gaming-collections {
+  margin-top: 5cqw;
+  display: grid;
+  gap: 4cqw;
+}
+
+.gaming-collection {
+  display: grid;
+  gap: 1cqw;
+}
+
+.media-pair {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1cqw;
+}
+
+.media-pair > img,
+.media-pair > video {
+  display: block;
+  width: 100%;
+  height: auto;
+}

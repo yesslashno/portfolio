@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>E.B. Davis III — Portfolio</title>
-  <link rel="stylesheet" href="style.css?v=9">
+  <link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
   <main class="page">
@@ -106,10 +106,10 @@
         <p class="project-number">2</p>
         <div class="project-header">
           <div>
-            <h2 id="ghost-title">Bringing video<br>games into the<br>smart home.</h2>
+            <h2 id="ghost-title">Taking video<br>games outside<br>of the game.</h2>
             <p class="project-awards">Gold, Silver, Bronze Lions</p>
           </div>
-          <p class="project-description">For Activision, we brought the rich, immersive worlds of gaming into the real world.</p>
+          <p class="project-description">Call of Duty! Minecraft! Destiny! <s>Oculus</s> Meta Quest! An Amazon Alexa skill that used voice commands to change the game in real time. Bringing the immersion of virtual reality to life, without the headset. All the terrible ways you'll die in space. Certainly the best idea you'll see involving an accused murderer. And more! Also that one time where we tried to make a mind-controlled drone.</p>
         </div>
       </header>
       <div class="project-media">
@@ -134,6 +134,46 @@
         <img src="images/Ghost/ghost-press.png" alt="Press coverage of Destiny 2's Ghost voice assistant" loading="lazy">
       </div>
       <p class="project-credits">Silver Cannes Lion, Gold Clio, 2x Adweek Project Isaac, Silver Clio<br>Forbes, Polygon, Engadget, Time, PSFK, Mashable, The Verge, Rolling Stone</p>
+
+      <!-- Each group has a full-width film preview and two equal-width loops. -->
+      <div class="gaming-collections">
+        <section class="gaming-collection" aria-label="Call of Duty: Hostile Takeover">
+          <div class="video-feature">
+            <img class="video-preview" src="images/Gaming/COD-Hostile-Takeover/cod-hostile-takeover.png" alt="Call of Duty: Hostile Takeover" loading="lazy">
+            <video class="full-film" controls playsinline preload="none" data-src="images/Gaming/COD-Hostile-Takeover/cod_hostiletakeover—case study.mp4" aria-label="Call of Duty: Hostile Takeover film" hidden></video>
+            <button class="play-button" type="button" aria-label="Play Call of Duty: Hostile Takeover film"><span aria-hidden="true">▶</span></button>
+            <p class="video-error" role="status" hidden></p>
+          </div>
+          <div class="media-pair">
+            <video autoplay muted loop playsinline preload="metadata" aria-label="Call of Duty: Hostile Takeover — left clip"><source src="images/Gaming/COD-Hostile-Takeover/cod-reyes1_480.mp4" type="video/mp4"></video>
+            <video autoplay muted loop playsinline preload="metadata" aria-label="Call of Duty: Hostile Takeover — right clip"><source src="images/Gaming/COD-Hostile-Takeover/cod-messages_480.mp4" type="video/mp4"></video>
+          </div>
+        </section>
+        <section class="gaming-collection" aria-label="Dance into Destiny">
+          <div class="video-feature">
+            <img class="video-preview" src="images/Gaming/Dance-Into-Destiny/d2-antonio.png" alt="Dance into Destiny" loading="lazy">
+            <video class="full-film" controls playsinline preload="none" data-src="images/Gaming/Dance-Into-Destiny/D2Dance-CS-smaller.mp4" aria-label="Dance into Destiny film" hidden></video>
+            <button class="play-button" type="button" aria-label="Play Dance into Destiny film"><span aria-hidden="true">▶</span></button>
+            <p class="video-error" role="status" hidden></p>
+          </div>
+          <div class="media-pair">
+            <video autoplay muted loop playsinline preload="metadata" aria-label="Dance into Destiny — left clip"><source src="images/Gaming/Dance-Into-Destiny/d2-dance_480.mp4" type="video/mp4"></video>
+            <video autoplay muted loop playsinline preload="metadata" aria-label="Dance into Destiny — right clip"><source src="images/Gaming/Dance-Into-Destiny/d2-touchdown_480.mp4" type="video/mp4"></video>
+          </div>
+        </section>
+        <section class="gaming-collection" aria-label="Call of Duty: Terminal Tours">
+          <div class="video-feature">
+            <img class="video-preview" src="images/Gaming/COD-Terminal-Tours/cod-tt-asteroid.gif" alt="Call of Duty: Terminal Tours" loading="lazy">
+            <video class="full-film" controls playsinline preload="none" data-src="images/Gaming/COD-Terminal-Tours/cod-tt-teaser_smaller.mp4" aria-label="Call of Duty: Terminal Tours film" hidden></video>
+            <button class="play-button" type="button" aria-label="Play Call of Duty: Terminal Tours film"><span aria-hidden="true">▶</span></button>
+            <p class="video-error" role="status" hidden></p>
+          </div>
+          <div class="media-pair">
+            <img src="images/Gaming/COD-Terminal-Tours/cod-tt-methane.gif" alt="Call of Duty: Terminal Tours — left clip" loading="lazy">
+            <img src="images/Gaming/COD-Terminal-Tours/cod-tt-selfie.gif" alt="Call of Duty: Terminal Tours — right clip" loading="lazy">
+          </div>
+        </section>
+      </div>
     </section>
   </main>
   <script src="videos.js?v=8" defer></script>
