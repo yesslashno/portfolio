@@ -69,3 +69,12 @@ const loopObserver = new IntersectionObserver((entries) => {
 });
 loops.forEach((video) => loopObserver.observe(video));
 document.addEventListener('visibilitychange', () => loops.forEach(updateLoop));
+
+// Native-control films also stop any other full film's audio.
+document.querySelectorAll('.full-film').forEach((film) => {
+  film.addEventListener('play', () => {
+    document.querySelectorAll('.full-film').forEach((other) => {
+      if (other !== film) other.pause();
+    });
+  });
+});

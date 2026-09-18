@@ -322,3 +322,34 @@ img {
   width: 100%;
   height: auto;
 }
+
+/* Groups keep their two- and three-column compositions on smaller screens. */
+.gaming-collection > img,
+.gaming-collection > video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.media-trio {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1cqw;
+}
+
+/* Getting Real episodes and their covers are portrait videos. */
+.portrait-trio .video-feature {
+  aspect-ratio: 9 / 16;
+}
+
+.minecraft-collection .media-pair .video-feature,
+.minecraft-collection .media-trio > video {
+  aspect-ratio: 4 / 5;
+}
+
+.media-trio > video {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
