@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>E.B. Davis III — Portfolio</title>
-  <link rel="stylesheet" href="style.css?v=14">
+  <link rel="stylesheet" href="style.css?v=17">
 </head>
 <body>
   <main class="page">
@@ -324,10 +324,8 @@
             <button class="play-button" type="button" aria-label="Play Dance into Destiny film"><span aria-hidden="true">▶</span></button>
             <p class="video-error" role="status" hidden></p>
           </div>
-          <div class="media-pair">
-            <video autoplay muted loop playsinline preload="metadata" aria-label="Dance into Destiny — left clip"><source src="images/Gaming/Dance-Into-Destiny/d2-dance_480.mp4" type="video/mp4"></video>
-            <video autoplay muted loop playsinline preload="metadata" aria-label="Dance into Destiny — right clip"><source src="images/Gaming/Dance-Into-Destiny/d2-touchdown_480.mp4" type="video/mp4"></video>
-          </div>
+          <!-- The unused left clip remains in the repository for a possible revert. -->
+          <video autoplay muted loop playsinline preload="metadata" aria-label="Dance into Destiny touchdown"><source src="images/Gaming/Dance-Into-Destiny/d2-touchdown_480.mp4" type="video/mp4"></video>
         </section>
         <section class="gaming-collection" aria-label="Call of Duty: Terminal Tours">
           <div class="video-feature">
@@ -355,6 +353,65 @@
         </section>
       </div>
     </section>
+    <section class="project" style="--accent: #FFD84D" aria-labelledby="coke-title">
+      <header class="project-intro">
+        <p class="project-number">4</p>
+        <div class="project-header">
+          <h2 id="coke-title">Bite and sip and chew and slurp with Fanta and Coke Zero.</h2>
+          <p class="project-description">A boy's dream was to work for Coke. I now have more interesting dreams.</p>
+        </div>
+      </header>
+      <div class="project-media">
+        <div class="video-feature">
+          <video class="video-preview" autoplay muted loop playsinline preload="metadata" aria-label="Coke Zero triptych preview"><source src="images/coke/cz-triptych.mp4" type="video/mp4"></video>
+          <video class="full-film" controls playsinline preload="none" data-src="images/coke/CZ-hero-video.mp4" aria-label="Coke Zero film" hidden></video>
+          <button class="play-button" type="button" aria-label="Play Coke Zero film"><span aria-hidden="true">▶</span></button>
+          <p class="video-error" role="status" hidden></p>
+        </div>
+        <img src="images/coke/cz-three-headed-beast.png" alt="Coke Zero three-headed beast" loading="lazy">
+        <video autoplay muted loop playsinline preload="metadata" aria-label="Coke Zero turn"><source src="images/coke/cz-turn.mp4" type="video/mp4"></video>
+        <img src="images/coke/cz-designsystem.png" alt="Coke Zero design system" loading="lazy">
+      </div>
+    </section>
+
+    <section class="project" style="--accent: #A60000" aria-labelledby="levis-title">
+      <header class="project-intro">
+        <p class="project-number">5</p>
+        <div class="project-header">
+          <h2 id="levis-title">Levi's is the ultimate blank canvas</h2>
+          <p class="project-description">Motherfucker, we made <em>a lot</em> with Levi's. We are their social agency of record and the story of our relationship is that we went from resize monkeys to joining productions in order to make our own content, to directing the seasonal videos in-house, to owning global strategic initiatives, to owning partnership launches, to owning sub-brand rebrandings. Now we make TikToks! Yay!</p>
+        </div>
+      </header>
+      <div class="project-media">
+        <img src="images/levis/levi's-flx.png" alt="Levi's FLX" loading="lazy">
+      </div>
+    </section>
+
+    <section class="project" style="--accent: #FF5A16" aria-labelledby="fun-title">
+      <header class="project-intro">
+        <p class="project-number">6</p>
+        <div class="project-header">
+          <h2 id="fun-title">We're just out here trying to have fun.</h2>
+          <p class="project-description">Random things and one-offs that didn't fit elsewhere. ¯\_(ツ)_/¯</p>
+        </div>
+      </header>
+
+    </section>
+
+    <section class="project" style="--accent: #FF00A8" aria-labelledby="about-title">
+      <header class="project-intro">
+        <p class="project-number">7</p>
+        <div class="project-header">
+          <h2 id="about-title">About me</h2>
+          <p class="project-description">I'm a stinker</p>
+        </div>
+      </header>
+      <div class="about-comic">
+        <img src="images/about-me/me-escape.png" alt="A comic of E.B. escaping his desk to head outdoors" loading="lazy">
+        <a class="email-link" href="mailto:hunkyard.dog@gmail.com">hunkyard.dog@gmail.com</a>
+      </div>
+    </section>
+
   </main>
   <script src="videos.js?v=11" defer></script>
 </body>
