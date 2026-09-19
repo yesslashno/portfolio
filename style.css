@@ -353,3 +353,10 @@ img {
   height: auto;
   object-fit: contain;
 }
+
+/* Keep intrinsic video dimensions from stretching the Minecraft rows. */
+.minecraft-collection .video-feature > .video-preview,
+.minecraft-collection .video-feature > .full-film {
+  position: absolute;
+  inset: 0;
+}
