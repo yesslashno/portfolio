@@ -152,7 +152,11 @@ img {
 }
 
 .project {
-  margin-top: 13cqw;
+  display: flow-root;
+  margin: 13cqw 0 0;
+}
+
+.project:last-child {
   margin-bottom: 10cqw;
 }
 
